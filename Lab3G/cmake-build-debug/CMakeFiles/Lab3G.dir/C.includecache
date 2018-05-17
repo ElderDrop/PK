@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ElderDrop/workspace/PK/Lab3G/main.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+time.h
+-
+

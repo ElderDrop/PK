@@ -1,0 +1,3 @@
+/home/ElderDrop/workspace/PK/Lab3G/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/ElderDrop/workspace/PK/Lab3G/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/ElderDrop/workspace/PK/Lab3G/cmake-build-debug/CMakeFiles/Lab3G.dir

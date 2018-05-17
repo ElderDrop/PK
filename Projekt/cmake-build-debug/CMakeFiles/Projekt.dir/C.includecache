@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ElderDrop/workspace/PK/Projekt/gameOfLife.c
+string.h
+-
+stdio.h
+-
+stdlib.h
+-
+gameOfLife.h
+/home/ElderDrop/workspace/PK/Projekt/gameOfLife.h
+
+/home/ElderDrop/workspace/PK/Projekt/gameOfLife.h
+stdbool.h
+-
+gameOfLifeArguments.h
+/home/ElderDrop/workspace/PK/Projekt/gameOfLifeArguments.h
+
+/home/ElderDrop/workspace/PK/Projekt/gameOfLifeArguments.c
+gameOfLifeArguments.h
+/home/ElderDrop/workspace/PK/Projekt/gameOfLifeArguments.h
+stdlib.h
+-
+string.h
+-
+
+/home/ElderDrop/workspace/PK/Projekt/gameOfLifeArguments.h
+stdbool.h
+-
+
+/home/ElderDrop/workspace/PK/Projekt/main.c
+stdio.h
+-
+string.h
+-
+stdlib.h
+-
+gameOfLife.h
+/home/ElderDrop/workspace/PK/Projekt/gameOfLife.h
+
