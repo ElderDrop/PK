@@ -4,6 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
+  "/home/ElderDrop/workspace/PK/Projekt/Ant.c" "/home/ElderDrop/workspace/PK/Projekt/cmake-build-debug/CMakeFiles/Projekt.dir/Ant.c.o"
+  "/home/ElderDrop/workspace/PK/Projekt/AntProperties.c" "/home/ElderDrop/workspace/PK/Projekt/cmake-build-debug/CMakeFiles/Projekt.dir/AntProperties.c.o"
   "/home/ElderDrop/workspace/PK/Projekt/gameOfLife.c" "/home/ElderDrop/workspace/PK/Projekt/cmake-build-debug/CMakeFiles/Projekt.dir/gameOfLife.c.o"
   "/home/ElderDrop/workspace/PK/Projekt/gameOfLifeArguments.c" "/home/ElderDrop/workspace/PK/Projekt/cmake-build-debug/CMakeFiles/Projekt.dir/gameOfLifeArguments.c.o"
   "/home/ElderDrop/workspace/PK/Projekt/main.c" "/home/ElderDrop/workspace/PK/Projekt/cmake-build-debug/CMakeFiles/Projekt.dir/main.c.o"

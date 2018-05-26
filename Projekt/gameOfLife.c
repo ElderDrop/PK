@@ -1,40 +1,49 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <pthread.h>
 #include "gameOfLife.h"
-
-
+#include "ThreadArg.h"
 
 void gameOfLife(struct GameOfLifeArguments *pArguments) {
+    // Prepare game
     struct GameOfLife game;
     game.boardState = true;
-    loadBoard(&game,pArguments);
+    // Load board
+    if(!loadBoard(&game,pArguments))
+        return;
+    pthread_t pthread;
+    struct ThreadArg threadArg;
+    threadArg.width = pArguments->width;
+    threadArg.height = pArguments->height;
+    // Run
     for(int i = 0;i<pArguments->lastCycle;i++)
     {
         if(game.boardState)
         {
             cycle(game.board1,game.board2,pArguments);
-            zero(game.board1,pArguments);
+            threadArg.board = game.board1;
         }
         else
         {
             cycle(game.board2,game.board1,pArguments);
-            zero(game.board2,pArguments);
+            threadArg.board = game.board2;
         }
+        pthread_create(&pthread, NULL,&zero, &threadArg);
         game.boardState = !game.boardState;
     }
+    // Save results
     saveGameToFile(game,pArguments);
+    // Free memory
     clear(&game);
 }
 
-void zero(char **pBoard, struct GameOfLifeArguments *pArguments) {
-    for (int i = 0;i < pArguments->height; i++)
-    {
-        for(int j = 0;j < pArguments->width;j++)
-        {
-            pBoard[i][j] = '0';
-        }
-    }
+// Zero bard
+void zero(void * pArgs) {
+    struct ThreadArg *threadArg = (struct ThreadArg *) pArgs;
+    for (int i = 0;i < threadArg->height; i++)
+        for(int j = 0;j < threadArg->width;j++)
+            threadArg->board[i][j] = '0';
 }
 
 
@@ -43,13 +52,13 @@ void cycle(char **pMain, char **pTo, struct GameOfLifeArguments *pArguments) {
         for(int j = 0; j< pArguments->width;j++)
         {
             if(pMain[i][j] == '0'  && (countNeighbours(pMain,i,j,pArguments) == 3))
-            {
                 pTo[i][j] = '1';
-            }
+
             else if(pMain[i][j] == '1' && ((countNeighbours(pMain, i, j,pArguments) == 3) || (countNeighbours(pMain,i, j,pArguments) == 2)))
             {
                 pTo[i][j] = '1';
-            } else{
+            }
+            else {
                 pTo[i][j] = '0';
             }
         }
@@ -148,4 +157,6 @@ void clear(struct GameOfLife *pGame) {
         free(pGame->board1[i]);
         free(pGame->board2[i]);
     }
+    free(pGame->board1);
+    free(pGame->board2);
 }

@@ -25,7 +25,7 @@ int countNeighbours(char** board,int x, int y, struct GameOfLifeArguments *pArgu
 
 int isAlive(char i);
 
-void zero(char **pBoard, struct GameOfLifeArguments *pArguments);
+void zero(void * pArgs);
 
 void clear(struct GameOfLife *pGame);
 #endif //PROJEKT_GAMEOFLIFE_H

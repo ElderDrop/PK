@@ -6,6 +6,32 @@
 
 #IncludeRegexTransform: 
 
+/home/ElderDrop/workspace/PK/Projekt/Ant.c
+stdlib.h
+-
+Ant.h
+/home/ElderDrop/workspace/PK/Projekt/Ant.h
+stdio.h
+-
+
+/home/ElderDrop/workspace/PK/Projekt/Ant.h
+AntProperties.h
+/home/ElderDrop/workspace/PK/Projekt/AntProperties.h
+
+/home/ElderDrop/workspace/PK/Projekt/AntProperties.c
+AntProperties.h
+/home/ElderDrop/workspace/PK/Projekt/AntProperties.h
+stdlib.h
+-
+string.h
+-
+
+/home/ElderDrop/workspace/PK/Projekt/AntProperties.h
+stdbool.h
+-
+
+/home/ElderDrop/workspace/PK/Projekt/ThreadArg.h
+
 /home/ElderDrop/workspace/PK/Projekt/gameOfLife.c
 string.h
 -
@@ -13,8 +39,12 @@ stdio.h
 -
 stdlib.h
 -
+pthread.h
+-
 gameOfLife.h
 /home/ElderDrop/workspace/PK/Projekt/gameOfLife.h
+ThreadArg.h
+/home/ElderDrop/workspace/PK/Projekt/ThreadArg.h
 
 /home/ElderDrop/workspace/PK/Projekt/gameOfLife.h
 stdbool.h
@@ -43,4 +73,6 @@ stdlib.h
 -
 gameOfLife.h
 /home/ElderDrop/workspace/PK/Projekt/gameOfLife.h
+Ant.h
+/home/ElderDrop/workspace/PK/Projekt/Ant.h
 

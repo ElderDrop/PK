@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake -E remove -f
+RM = /home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -129,11 +129,61 @@ CMakeFiles/Projekt.dir/gameOfLifeArguments.c.o.provides: CMakeFiles/Projekt.dir/
 CMakeFiles/Projekt.dir/gameOfLifeArguments.c.o.provides.build: CMakeFiles/Projekt.dir/gameOfLifeArguments.c.o
 
 
+CMakeFiles/Projekt.dir/Ant.c.o: CMakeFiles/Projekt.dir/flags.make
+CMakeFiles/Projekt.dir/Ant.c.o: ../Ant.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ElderDrop/workspace/PK/Projekt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/Projekt.dir/Ant.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Projekt.dir/Ant.c.o   -c /home/ElderDrop/workspace/PK/Projekt/Ant.c
+
+CMakeFiles/Projekt.dir/Ant.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Projekt.dir/Ant.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ElderDrop/workspace/PK/Projekt/Ant.c > CMakeFiles/Projekt.dir/Ant.c.i
+
+CMakeFiles/Projekt.dir/Ant.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Projekt.dir/Ant.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ElderDrop/workspace/PK/Projekt/Ant.c -o CMakeFiles/Projekt.dir/Ant.c.s
+
+CMakeFiles/Projekt.dir/Ant.c.o.requires:
+
+.PHONY : CMakeFiles/Projekt.dir/Ant.c.o.requires
+
+CMakeFiles/Projekt.dir/Ant.c.o.provides: CMakeFiles/Projekt.dir/Ant.c.o.requires
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/Ant.c.o.provides.build
+.PHONY : CMakeFiles/Projekt.dir/Ant.c.o.provides
+
+CMakeFiles/Projekt.dir/Ant.c.o.provides.build: CMakeFiles/Projekt.dir/Ant.c.o
+
+
+CMakeFiles/Projekt.dir/AntProperties.c.o: CMakeFiles/Projekt.dir/flags.make
+CMakeFiles/Projekt.dir/AntProperties.c.o: ../AntProperties.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/ElderDrop/workspace/PK/Projekt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/Projekt.dir/AntProperties.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/Projekt.dir/AntProperties.c.o   -c /home/ElderDrop/workspace/PK/Projekt/AntProperties.c
+
+CMakeFiles/Projekt.dir/AntProperties.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/Projekt.dir/AntProperties.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/ElderDrop/workspace/PK/Projekt/AntProperties.c > CMakeFiles/Projekt.dir/AntProperties.c.i
+
+CMakeFiles/Projekt.dir/AntProperties.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/Projekt.dir/AntProperties.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/ElderDrop/workspace/PK/Projekt/AntProperties.c -o CMakeFiles/Projekt.dir/AntProperties.c.s
+
+CMakeFiles/Projekt.dir/AntProperties.c.o.requires:
+
+.PHONY : CMakeFiles/Projekt.dir/AntProperties.c.o.requires
+
+CMakeFiles/Projekt.dir/AntProperties.c.o.provides: CMakeFiles/Projekt.dir/AntProperties.c.o.requires
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/AntProperties.c.o.provides.build
+.PHONY : CMakeFiles/Projekt.dir/AntProperties.c.o.provides
+
+CMakeFiles/Projekt.dir/AntProperties.c.o.provides.build: CMakeFiles/Projekt.dir/AntProperties.c.o
+
+
 # Object files for target Projekt
 Projekt_OBJECTS = \
 "CMakeFiles/Projekt.dir/main.c.o" \
 "CMakeFiles/Projekt.dir/gameOfLife.c.o" \
-"CMakeFiles/Projekt.dir/gameOfLifeArguments.c.o"
+"CMakeFiles/Projekt.dir/gameOfLifeArguments.c.o" \
+"CMakeFiles/Projekt.dir/Ant.c.o" \
+"CMakeFiles/Projekt.dir/AntProperties.c.o"
 
 # External object files for target Projekt
 Projekt_EXTERNAL_OBJECTS =
@@ -141,9 +191,11 @@ Projekt_EXTERNAL_OBJECTS =
 Projekt: CMakeFiles/Projekt.dir/main.c.o
 Projekt: CMakeFiles/Projekt.dir/gameOfLife.c.o
 Projekt: CMakeFiles/Projekt.dir/gameOfLifeArguments.c.o
+Projekt: CMakeFiles/Projekt.dir/Ant.c.o
+Projekt: CMakeFiles/Projekt.dir/AntProperties.c.o
 Projekt: CMakeFiles/Projekt.dir/build.make
 Projekt: CMakeFiles/Projekt.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ElderDrop/workspace/PK/Projekt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable Projekt"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/ElderDrop/workspace/PK/Projekt/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking C executable Projekt"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Projekt.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -154,6 +206,8 @@ CMakeFiles/Projekt.dir/build: Projekt
 CMakeFiles/Projekt.dir/requires: CMakeFiles/Projekt.dir/main.c.o.requires
 CMakeFiles/Projekt.dir/requires: CMakeFiles/Projekt.dir/gameOfLife.c.o.requires
 CMakeFiles/Projekt.dir/requires: CMakeFiles/Projekt.dir/gameOfLifeArguments.c.o.requires
+CMakeFiles/Projekt.dir/requires: CMakeFiles/Projekt.dir/Ant.c.o.requires
+CMakeFiles/Projekt.dir/requires: CMakeFiles/Projekt.dir/AntProperties.c.o.requires
 
 .PHONY : CMakeFiles/Projekt.dir/requires
 

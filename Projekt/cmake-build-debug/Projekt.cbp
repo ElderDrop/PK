@@ -78,6 +78,21 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/Ant.c">
+			<Option target="Projekt"/>
+		</Unit>
+		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/Ant.h">
+			<Option target="Projekt"/>
+		</Unit>
+		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/AntProperties.c">
+			<Option target="Projekt"/>
+		</Unit>
+		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/AntProperties.h">
+			<Option target="Projekt"/>
+		</Unit>
+		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/ThreadArg.h">
+			<Option target="Projekt"/>
+		</Unit>
 		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/gameOfLife.c">
 			<Option target="Projekt"/>
 		</Unit>

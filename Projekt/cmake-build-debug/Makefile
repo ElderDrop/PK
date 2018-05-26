@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake -E remove -f
+RM = /home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/ElderDrop/workspace/PK/Projekt/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.4668.70/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -122,6 +122,60 @@ Projekt: cmake_check_build_system
 Projekt/fast:
 	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/build
 .PHONY : Projekt/fast
+
+Ant.o: Ant.c.o
+
+.PHONY : Ant.o
+
+# target to build an object file
+Ant.c.o:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/Ant.c.o
+.PHONY : Ant.c.o
+
+Ant.i: Ant.c.i
+
+.PHONY : Ant.i
+
+# target to preprocess a source file
+Ant.c.i:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/Ant.c.i
+.PHONY : Ant.c.i
+
+Ant.s: Ant.c.s
+
+.PHONY : Ant.s
+
+# target to generate assembly for a file
+Ant.c.s:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/Ant.c.s
+.PHONY : Ant.c.s
+
+AntProperties.o: AntProperties.c.o
+
+.PHONY : AntProperties.o
+
+# target to build an object file
+AntProperties.c.o:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/AntProperties.c.o
+.PHONY : AntProperties.c.o
+
+AntProperties.i: AntProperties.c.i
+
+.PHONY : AntProperties.i
+
+# target to preprocess a source file
+AntProperties.c.i:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/AntProperties.c.i
+.PHONY : AntProperties.c.i
+
+AntProperties.s: AntProperties.c.s
+
+.PHONY : AntProperties.s
+
+# target to generate assembly for a file
+AntProperties.c.s:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/AntProperties.c.s
+.PHONY : AntProperties.c.s
 
 gameOfLife.o: gameOfLife.c.o
 
@@ -213,6 +267,12 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Projekt"
+	@echo "... Ant.o"
+	@echo "... Ant.i"
+	@echo "... Ant.s"
+	@echo "... AntProperties.o"
+	@echo "... AntProperties.i"
+	@echo "... AntProperties.s"
 	@echo "... gameOfLife.o"
 	@echo "... gameOfLife.i"
 	@echo "... gameOfLife.s"
