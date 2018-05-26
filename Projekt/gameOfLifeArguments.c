@@ -11,6 +11,8 @@ bool isLifePropertiesValid(struct GameOfLifeArguments *pProperties) {
         return false;
     if(pProperties->width == 0)
         return false;
+    if(pProperties->height == 0)
+        return false;
     return true;
 }
 
