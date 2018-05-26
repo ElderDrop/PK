@@ -16,16 +16,20 @@ void gameOfLife(struct GameOfLifeArguments *pArguments) {
     struct ThreadArg threadArg;
     threadArg.width = pArguments->width;
     threadArg.height = pArguments->height;
+    threadArg.board = game.board2;
     // Run
+    pthread_create(&pthread, NULL,&zero, &threadArg);
     for(int i = 0;i<pArguments->lastCycle;i++)
     {
         if(game.boardState)
         {
+            pthread_join(pthread, NULL);
             cycle(game.board1,game.board2,pArguments);
             threadArg.board = game.board1;
         }
         else
         {
+            pthread_join(pthread, NULL);
             cycle(game.board2,game.board1,pArguments);
             threadArg.board = game.board2;
         }
