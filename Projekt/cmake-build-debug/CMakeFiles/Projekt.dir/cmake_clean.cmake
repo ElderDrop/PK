@@ -1,9 +1,11 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Projekt.dir/main.c.o"
-  "CMakeFiles/Projekt.dir/gameOfLife.c.o"
-  "CMakeFiles/Projekt.dir/gameOfLifeArguments.c.o"
+  "CMakeFiles/Projekt.dir/GameOfLife.c.o"
+  "CMakeFiles/Projekt.dir/GameOfLifeArguments.c.o"
   "CMakeFiles/Projekt.dir/Ant.c.o"
   "CMakeFiles/Projekt.dir/AntProperties.c.o"
+  "CMakeFiles/Projekt.dir/AntPath.c.o"
+  "CMakeFiles/Projekt.dir/Mode.c.o"
   "Projekt.pdb"
   "Projekt"
 )

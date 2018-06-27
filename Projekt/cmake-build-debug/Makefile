@@ -39,10 +39,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake
+CMAKE_COMMAND = /home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.33/bin/cmake/bin/cmake
 
 # The command to remove a file.
-RM = /home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -E remove -f
+RM = /home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.33/bin/cmake/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/ElderDrop/workspace/PK/Projekt/cmake-build-debug
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.33/bin/cmake/bin/cmake -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5087.36/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/ElderDrop/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/181.5281.33/bin/cmake/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -150,6 +150,33 @@ Ant.c.s:
 	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/Ant.c.s
 .PHONY : Ant.c.s
 
+AntPath.o: AntPath.c.o
+
+.PHONY : AntPath.o
+
+# target to build an object file
+AntPath.c.o:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/AntPath.c.o
+.PHONY : AntPath.c.o
+
+AntPath.i: AntPath.c.i
+
+.PHONY : AntPath.i
+
+# target to preprocess a source file
+AntPath.c.i:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/AntPath.c.i
+.PHONY : AntPath.c.i
+
+AntPath.s: AntPath.c.s
+
+.PHONY : AntPath.s
+
+# target to generate assembly for a file
+AntPath.c.s:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/AntPath.c.s
+.PHONY : AntPath.c.s
+
 AntProperties.o: AntProperties.c.o
 
 .PHONY : AntProperties.o
@@ -177,59 +204,86 @@ AntProperties.c.s:
 	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/AntProperties.c.s
 .PHONY : AntProperties.c.s
 
-gameOfLife.o: gameOfLife.c.o
+GameOfLife.o: GameOfLife.c.o
 
-.PHONY : gameOfLife.o
-
-# target to build an object file
-gameOfLife.c.o:
-	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/gameOfLife.c.o
-.PHONY : gameOfLife.c.o
-
-gameOfLife.i: gameOfLife.c.i
-
-.PHONY : gameOfLife.i
-
-# target to preprocess a source file
-gameOfLife.c.i:
-	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/gameOfLife.c.i
-.PHONY : gameOfLife.c.i
-
-gameOfLife.s: gameOfLife.c.s
-
-.PHONY : gameOfLife.s
-
-# target to generate assembly for a file
-gameOfLife.c.s:
-	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/gameOfLife.c.s
-.PHONY : gameOfLife.c.s
-
-gameOfLifeArguments.o: gameOfLifeArguments.c.o
-
-.PHONY : gameOfLifeArguments.o
+.PHONY : GameOfLife.o
 
 # target to build an object file
-gameOfLifeArguments.c.o:
-	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/gameOfLifeArguments.c.o
-.PHONY : gameOfLifeArguments.c.o
+GameOfLife.c.o:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/GameOfLife.c.o
+.PHONY : GameOfLife.c.o
 
-gameOfLifeArguments.i: gameOfLifeArguments.c.i
+GameOfLife.i: GameOfLife.c.i
 
-.PHONY : gameOfLifeArguments.i
+.PHONY : GameOfLife.i
 
 # target to preprocess a source file
-gameOfLifeArguments.c.i:
-	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/gameOfLifeArguments.c.i
-.PHONY : gameOfLifeArguments.c.i
+GameOfLife.c.i:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/GameOfLife.c.i
+.PHONY : GameOfLife.c.i
 
-gameOfLifeArguments.s: gameOfLifeArguments.c.s
+GameOfLife.s: GameOfLife.c.s
 
-.PHONY : gameOfLifeArguments.s
+.PHONY : GameOfLife.s
 
 # target to generate assembly for a file
-gameOfLifeArguments.c.s:
-	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/gameOfLifeArguments.c.s
-.PHONY : gameOfLifeArguments.c.s
+GameOfLife.c.s:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/GameOfLife.c.s
+.PHONY : GameOfLife.c.s
+
+GameOfLifeArguments.o: GameOfLifeArguments.c.o
+
+.PHONY : GameOfLifeArguments.o
+
+# target to build an object file
+GameOfLifeArguments.c.o:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/GameOfLifeArguments.c.o
+.PHONY : GameOfLifeArguments.c.o
+
+GameOfLifeArguments.i: GameOfLifeArguments.c.i
+
+.PHONY : GameOfLifeArguments.i
+
+# target to preprocess a source file
+GameOfLifeArguments.c.i:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/GameOfLifeArguments.c.i
+.PHONY : GameOfLifeArguments.c.i
+
+GameOfLifeArguments.s: GameOfLifeArguments.c.s
+
+.PHONY : GameOfLifeArguments.s
+
+# target to generate assembly for a file
+GameOfLifeArguments.c.s:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/GameOfLifeArguments.c.s
+.PHONY : GameOfLifeArguments.c.s
+
+Mode.o: Mode.c.o
+
+.PHONY : Mode.o
+
+# target to build an object file
+Mode.c.o:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/Mode.c.o
+.PHONY : Mode.c.o
+
+Mode.i: Mode.c.i
+
+.PHONY : Mode.i
+
+# target to preprocess a source file
+Mode.c.i:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/Mode.c.i
+.PHONY : Mode.c.i
+
+Mode.s: Mode.c.s
+
+.PHONY : Mode.s
+
+# target to generate assembly for a file
+Mode.c.s:
+	$(MAKE) -f CMakeFiles/Projekt.dir/build.make CMakeFiles/Projekt.dir/Mode.c.s
+.PHONY : Mode.c.s
 
 main.o: main.c.o
 
@@ -270,15 +324,21 @@ help:
 	@echo "... Ant.o"
 	@echo "... Ant.i"
 	@echo "... Ant.s"
+	@echo "... AntPath.o"
+	@echo "... AntPath.i"
+	@echo "... AntPath.s"
 	@echo "... AntProperties.o"
 	@echo "... AntProperties.i"
 	@echo "... AntProperties.s"
-	@echo "... gameOfLife.o"
-	@echo "... gameOfLife.i"
-	@echo "... gameOfLife.s"
-	@echo "... gameOfLifeArguments.o"
-	@echo "... gameOfLifeArguments.i"
-	@echo "... gameOfLifeArguments.s"
+	@echo "... GameOfLife.o"
+	@echo "... GameOfLife.i"
+	@echo "... GameOfLife.s"
+	@echo "... GameOfLifeArguments.o"
+	@echo "... GameOfLifeArguments.i"
+	@echo "... GameOfLifeArguments.s"
+	@echo "... Mode.o"
+	@echo "... Mode.i"
+	@echo "... Mode.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

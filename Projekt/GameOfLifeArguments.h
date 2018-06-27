@@ -11,8 +11,22 @@ struct GameOfLifeArguments {
     unsigned int height;
 };
 
+/**
+ * Gets properties from command line
+ * @param argc      - quantity of arguments
+ * @param argv      - arguments list
+ * @param properties- properties to return
+ * @return true     - if success
+ *         false    - if failed
+ */
 bool getArguments(int argc, char **argv,struct GameOfLifeArguments* pArguments);
 
+/**
+ * Validate arguments
+ * @param pArguments -  properties pointer
+ * @return true     - if arguments are valid
+ *         false    - if arguments are valid
+ */
 bool isLifePropertiesValid(struct GameOfLifeArguments *pArguments);
 
 #endif //PROJEKT_GAMEOFLIFEARGUMENT_H

@@ -4,21 +4,29 @@
 CMakeFiles/Projekt.dir/Ant.c.o
  /home/ElderDrop/workspace/PK/Projekt/Ant.c
  /home/ElderDrop/workspace/PK/Projekt/Ant.h
+ /home/ElderDrop/workspace/PK/Projekt/AntPath.h
  /home/ElderDrop/workspace/PK/Projekt/AntProperties.h
+CMakeFiles/Projekt.dir/AntPath.c.o
+ /home/ElderDrop/workspace/PK/Projekt/AntPath.c
+ /home/ElderDrop/workspace/PK/Projekt/AntPath.h
 CMakeFiles/Projekt.dir/AntProperties.c.o
  /home/ElderDrop/workspace/PK/Projekt/AntProperties.c
  /home/ElderDrop/workspace/PK/Projekt/AntProperties.h
-CMakeFiles/Projekt.dir/gameOfLife.c.o
+CMakeFiles/Projekt.dir/GameOfLife.c.o
+ /home/ElderDrop/workspace/PK/Projekt/GameOfLife.c
+ /home/ElderDrop/workspace/PK/Projekt/GameOfLife.h
+ /home/ElderDrop/workspace/PK/Projekt/GameOfLifeArguments.h
  /home/ElderDrop/workspace/PK/Projekt/ThreadArg.h
- /home/ElderDrop/workspace/PK/Projekt/gameOfLife.c
- /home/ElderDrop/workspace/PK/Projekt/gameOfLife.h
- /home/ElderDrop/workspace/PK/Projekt/gameOfLifeArguments.h
-CMakeFiles/Projekt.dir/gameOfLifeArguments.c.o
- /home/ElderDrop/workspace/PK/Projekt/gameOfLifeArguments.c
- /home/ElderDrop/workspace/PK/Projekt/gameOfLifeArguments.h
+CMakeFiles/Projekt.dir/GameOfLifeArguments.c.o
+ /home/ElderDrop/workspace/PK/Projekt/GameOfLifeArguments.c
+ /home/ElderDrop/workspace/PK/Projekt/GameOfLifeArguments.h
+CMakeFiles/Projekt.dir/Mode.c.o
+ /home/ElderDrop/workspace/PK/Projekt/Mode.c
+ /home/ElderDrop/workspace/PK/Projekt/Mode.h
 CMakeFiles/Projekt.dir/main.c.o
  /home/ElderDrop/workspace/PK/Projekt/Ant.h
  /home/ElderDrop/workspace/PK/Projekt/AntProperties.h
- /home/ElderDrop/workspace/PK/Projekt/gameOfLife.h
- /home/ElderDrop/workspace/PK/Projekt/gameOfLifeArguments.h
+ /home/ElderDrop/workspace/PK/Projekt/GameOfLife.h
+ /home/ElderDrop/workspace/PK/Projekt/GameOfLifeArguments.h
+ /home/ElderDrop/workspace/PK/Projekt/Mode.h
  /home/ElderDrop/workspace/PK/Projekt/main.c

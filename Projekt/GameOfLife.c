@@ -1,11 +1,7 @@
-#include <string.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <pthread.h>
-#include "gameOfLife.h"
+#include "GameOfLife.h"
 #include "ThreadArg.h"
 
-void gameOfLife(struct GameOfLifeArguments *pArguments) {
+void gameOfLife(struct GameOfLifeArguments* pArguments) {
     // Prepare game
     struct GameOfLife game;
     game.boardState = true;
@@ -14,9 +10,11 @@ void gameOfLife(struct GameOfLifeArguments *pArguments) {
         return;
     pthread_t pthread;
     struct ThreadArg threadArg;
+
     threadArg.width = pArguments->width;
     threadArg.height = pArguments->height;
     threadArg.board = game.board2;
+    logLife(game,-1);
     // Run
     pthread_create(&pthread, NULL,&zero, &threadArg);
     for(int i = 0;i<pArguments->lastCycle;i++)
@@ -34,15 +32,17 @@ void gameOfLife(struct GameOfLifeArguments *pArguments) {
             threadArg.board = game.board2;
         }
         pthread_create(&pthread, NULL,&zero, &threadArg);
+        logLife(game,i);
         game.boardState = !game.boardState;
     }
     // Save results
     saveGameToFile(game,pArguments);
     // Free memory
+    pthread_detach(pthread);
     clear(&game);
 }
 
-// Zero bard
+// Zero board
 void zero(void * pArgs) {
     struct ThreadArg *threadArg = (struct ThreadArg *) pArgs;
     for (int i = 0;i < threadArg->height; i++)
@@ -69,7 +69,7 @@ void cycle(char **pMain, char **pTo, struct GameOfLifeArguments *pArguments) {
 
 }
 
-char validBoundaries(int x, int y, struct GameOfLifeArguments* pArguments){
+int validBoundaries(int x, int y, struct GameOfLifeArguments *pArguments) {
     if(x >= pArguments->width || x < 0 || y >= pArguments->height || y < 0) return 0;
     else return 1;
 }
@@ -136,23 +136,30 @@ bool loadBoard(struct GameOfLife *pGame, struct GameOfLifeArguments *pArguments)
 }
 
 void saveGameToFile(struct GameOfLife game, struct GameOfLifeArguments *pArguments) {
+
+    FILE* file = fopen(pArguments->endBoardFileName,"w+");
+    writeGame(file,game);
+    fclose(file);
+}
+
+void writeGame(FILE* file,struct GameOfLife game)
+{
+    char ** board = game.board2;
     if(game.boardState == false)
     {
-        game.board1 = game.board2;
+        board = game.board1;
     }
-    FILE* file = fopen(pArguments->endBoardFileName,"w+");
-    for(int i = 0; i < pArguments->height;i++)
+    for(int i = 0; i < game.height;i++)
     {
-        for(int j = 0; j < pArguments->width;j++)
+        for(int j = 0; j < game.width;j++)
         {
-            if(game.board1[i][j] == '1')
+            if(board[i][j] == '1')
                 fprintf(file,"1");
-            else if(game.board1[i][j] == '0')
+            else if(board[i][j] == '0')
                 fprintf(file,"0");
         }
         fprintf(file,"\n");
     }
-    fclose(file);
 }
 
 void clear(struct GameOfLife *pGame) {
@@ -163,4 +170,11 @@ void clear(struct GameOfLife *pGame) {
     }
     free(pGame->board1);
     free(pGame->board2);
+}
+
+void logLife(struct GameOfLife game,int cycle) {
+    FILE* file = fopen("log","a+");
+    fprintf(file,"Gra w życie cykl: %d \n",++cycle);
+    writeGame(file,game);
+    fclose(file);
 }

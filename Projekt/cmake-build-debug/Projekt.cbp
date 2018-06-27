@@ -84,25 +84,37 @@
 		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/Ant.h">
 			<Option target="Projekt"/>
 		</Unit>
+		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/AntPath.c">
+			<Option target="Projekt"/>
+		</Unit>
+		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/AntPath.h">
+			<Option target="Projekt"/>
+		</Unit>
 		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/AntProperties.c">
 			<Option target="Projekt"/>
 		</Unit>
 		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/AntProperties.h">
 			<Option target="Projekt"/>
 		</Unit>
+		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/GameOfLife.c">
+			<Option target="Projekt"/>
+		</Unit>
+		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/GameOfLife.h">
+			<Option target="Projekt"/>
+		</Unit>
+		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/GameOfLifeArguments.c">
+			<Option target="Projekt"/>
+		</Unit>
+		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/GameOfLifeArguments.h">
+			<Option target="Projekt"/>
+		</Unit>
+		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/Mode.c">
+			<Option target="Projekt"/>
+		</Unit>
+		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/Mode.h">
+			<Option target="Projekt"/>
+		</Unit>
 		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/ThreadArg.h">
-			<Option target="Projekt"/>
-		</Unit>
-		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/gameOfLife.c">
-			<Option target="Projekt"/>
-		</Unit>
-		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/gameOfLife.h">
-			<Option target="Projekt"/>
-		</Unit>
-		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/gameOfLifeArguments.c">
-			<Option target="Projekt"/>
-		</Unit>
-		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/gameOfLifeArguments.h">
 			<Option target="Projekt"/>
 		</Unit>
 		<Unit filename="/home/ElderDrop/workspace/PK/Projekt/main.c">

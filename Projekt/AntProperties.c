@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-bool isValid(struct AntProperties *pProperties)
-{
+bool isValid(struct AntProperties *pProperties) {
     if(pProperties->outputFileName == NULL || pProperties->outputFileName[0] == '\0')
         return false;
     if(pProperties->width == 0)
@@ -42,9 +41,13 @@ bool getAntArguments(int argc, char **argv, struct AntProperties *properties) {
         {
             properties->width = (unsigned int)atoi(argv[++i]);
         }
-        if(strcmp("-h",argv[i]) == 0)
+        if(strcmp("-t",argv[i]) == 0)
         {
             properties->height = (unsigned int)atoi(argv[++i]);
+        }
+        if(strcmp("-h",argv[i]) == 0)
+        {
+            return false;
         }
     }
     return isValid(properties);

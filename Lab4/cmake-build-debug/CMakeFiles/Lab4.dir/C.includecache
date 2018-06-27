@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ElderDrop/workspace/PK/Lab4/Centrala.c
+Centrala.h
+/home/ElderDrop/workspace/PK/Lab4/Centrala.h
+
+/home/ElderDrop/workspace/PK/Lab4/Centrala.h
+

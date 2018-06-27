@@ -1,6 +1,5 @@
-#include <stdlib.h>
 #include "Ant.h"
-#include <stdio.h>
+#include "AntPath.h"
 
 void antGame(struct AntProperties *pProperties) {
     unsigned int** board = makeBoard(pProperties);
@@ -8,13 +7,28 @@ void antGame(struct AntProperties *pProperties) {
         return;
     struct Ant ant;
     putAnt(&ant,board,pProperties);
+    logAnt(ant,board,pProperties,-1);
+    struct AntPath* pHead = NULL;
+    addPath(&pHead,ant.x,ant.y,-1);
     for(int i = 0; i < pProperties->moves;i++)
     {
         move(&ant,*pProperties);
         changeDirection(&ant,board);
         changeField(ant,board);
+        logAnt(ant,board,pProperties,i);
+        addPath(pHead,ant.x,ant.y,i);
     }
     save(ant, board, pProperties);
+    printPath(pHead);
+    clearPath(pHead);
+    clearBoard(board,pProperties);
+}
+
+void logAnt(struct Ant ant, unsigned int **board, struct AntProperties *pProperties,int cycle) {
+    FILE *file = fopen("log","a+");
+    fprintf(file,"Mrowka cykl: %d \n",++cycle);
+    writeAntGameToStream(file,ant,board,pProperties);
+    fclose(file);
 }
 
 
@@ -106,20 +120,31 @@ unsigned int **makeBoard(struct AntProperties *pProperties) {
 
 void save(struct Ant ant, unsigned int **board, struct AntProperties *pProperties) {
     FILE* file = fopen(pProperties->outputFileName,"w+");
-    board[ant.y][ant.x] = 3;
+    writeAntGameToStream(file,ant,board,pProperties);
+    fclose(file);
+
+}
+
+void writeAntGameToStream(FILE *file,struct Ant ant, unsigned int **board, struct AntProperties *pProperties) {
     for(int i = 0; i < pProperties->height;i++)
     {
         for(int j = 0; j < pProperties->width;j++)
         {
-            if(board[i][j] == 1)
+            if(j == ant.x && i == ant.y)
+                fprintf(file, "3");
+            else if(board[i][j] == 1)
                 fprintf(file, "1");
             else if(board[i][j] == 0)
                 fprintf(file, "0");
-            else if(board[i][j] == 3)
-                fprintf(file, "3");
+
         }
         fprintf(file,"\n");
     }
-    fclose(file);
-
 }
+
+void clearBoard(unsigned int **board, struct AntProperties *pProperties) {
+    for(int i = 0; i < pProperties->height;i++)
+        free(board[i]);
+    free(board);
+}
+

@@ -1,4 +1,4 @@
-#include "gameOfLifeArguments.h"
+#include "GameOfLifeArguments.h"
 #include <stdlib.h>
 #include <string.h>
 
@@ -41,9 +41,13 @@ bool getArguments(int argc, char **argv, struct GameOfLifeArguments *pArguments)
         {
             pArguments->width = (unsigned int)atoi(argv[++i]);
         }
-        if(strcmp("-h",argv[i]) == 0)
+        if(strcmp("-t",argv[i]) == 0)
         {
             pArguments->height = (unsigned int)atoi(argv[++i]);
+        }
+        if(strcmp("-h",argv[i]) == 0)
+        {
+            return false;
         }
     }
     return isLifePropertiesValid(pArguments);

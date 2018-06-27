@@ -7,16 +7,28 @@
 #IncludeRegexTransform: 
 
 /home/ElderDrop/workspace/PK/Projekt/Ant.c
-stdlib.h
--
 Ant.h
 /home/ElderDrop/workspace/PK/Projekt/Ant.h
-stdio.h
--
+AntPath.h
+/home/ElderDrop/workspace/PK/Projekt/AntPath.h
 
 /home/ElderDrop/workspace/PK/Projekt/Ant.h
 AntProperties.h
 /home/ElderDrop/workspace/PK/Projekt/AntProperties.h
+stdio.h
+-
+stdlib.h
+-
+
+/home/ElderDrop/workspace/PK/Projekt/AntPath.c
+AntPath.h
+/home/ElderDrop/workspace/PK/Projekt/AntPath.h
+
+/home/ElderDrop/workspace/PK/Projekt/AntPath.h
+stdlib.h
+-
+stdio.h
+-
 
 /home/ElderDrop/workspace/PK/Projekt/AntProperties.c
 AntProperties.h
@@ -30,9 +42,17 @@ string.h
 stdbool.h
 -
 
+/home/ElderDrop/workspace/PK/Projekt/GameOfLife.c
+GameOfLife.h
+/home/ElderDrop/workspace/PK/Projekt/GameOfLife.h
+ThreadArg.h
 /home/ElderDrop/workspace/PK/Projekt/ThreadArg.h
 
-/home/ElderDrop/workspace/PK/Projekt/gameOfLife.c
+/home/ElderDrop/workspace/PK/Projekt/GameOfLife.h
+stdbool.h
+-
+stdlib.h
+-
 string.h
 -
 stdio.h
@@ -41,28 +61,32 @@ stdlib.h
 -
 pthread.h
 -
-gameOfLife.h
-/home/ElderDrop/workspace/PK/Projekt/gameOfLife.h
-ThreadArg.h
-/home/ElderDrop/workspace/PK/Projekt/ThreadArg.h
+GameOfLifeArguments.h
+/home/ElderDrop/workspace/PK/Projekt/GameOfLifeArguments.h
 
-/home/ElderDrop/workspace/PK/Projekt/gameOfLife.h
-stdbool.h
--
-gameOfLifeArguments.h
-/home/ElderDrop/workspace/PK/Projekt/gameOfLifeArguments.h
-
-/home/ElderDrop/workspace/PK/Projekt/gameOfLifeArguments.c
-gameOfLifeArguments.h
-/home/ElderDrop/workspace/PK/Projekt/gameOfLifeArguments.h
+/home/ElderDrop/workspace/PK/Projekt/GameOfLifeArguments.c
+GameOfLifeArguments.h
+/home/ElderDrop/workspace/PK/Projekt/GameOfLifeArguments.h
 stdlib.h
 -
 string.h
 -
 
-/home/ElderDrop/workspace/PK/Projekt/gameOfLifeArguments.h
+/home/ElderDrop/workspace/PK/Projekt/GameOfLifeArguments.h
 stdbool.h
 -
+
+/home/ElderDrop/workspace/PK/Projekt/Mode.c
+Mode.h
+/home/ElderDrop/workspace/PK/Projekt/Mode.h
+
+/home/ElderDrop/workspace/PK/Projekt/Mode.h
+stdio.h
+-
+string.h
+-
+
+/home/ElderDrop/workspace/PK/Projekt/ThreadArg.h
 
 /home/ElderDrop/workspace/PK/Projekt/main.c
 stdio.h
@@ -71,8 +95,10 @@ string.h
 -
 stdlib.h
 -
-gameOfLife.h
-/home/ElderDrop/workspace/PK/Projekt/gameOfLife.h
+GameOfLife.h
+/home/ElderDrop/workspace/PK/Projekt/GameOfLife.h
 Ant.h
 /home/ElderDrop/workspace/PK/Projekt/Ant.h
+Mode.h
+/home/ElderDrop/workspace/PK/Projekt/Mode.h
 

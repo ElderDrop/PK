@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/ElderDrop/workspace/PK/Lab4/main.cpp
+stdio.h
+-
+unistd.h
+-
+time.h
+-
+stdlib.h
+-
+signal.h
+-
+string.h
+-
+
