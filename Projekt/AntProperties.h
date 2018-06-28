@@ -1,15 +1,22 @@
+/** @file  */
 #ifndef PROJEKT_ANTPROPERTIES_H
 #define PROJEKT_ANTPROPERTIES_H
 
 #include <stdbool.h>
-
+/** Contains data for ant game*/
 struct AntProperties
 {
+    /** Width of the board*/
     unsigned int width;
+    /** Height of the board*/
     unsigned int height;
+    /** Start x position*/
     unsigned int startX;
+    /** Start y position*/
     unsigned int startY;
+    /** How many moves will be processed*/
     unsigned int moves;
+    /** Output file name*/
     char* outputFileName;
 };
 /**

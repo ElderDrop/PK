@@ -1,0 +1,234 @@
+\hypertarget{_ant_8c}{}\section{Ant.\+c File Reference}
+\label{_ant_8c}\index{Ant.\+c@{Ant.\+c}}
+{\ttfamily \#include \char`\"{}Ant.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Ant\+Path.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_ant_8c_a519c00f7d8d01c295ac95792f77cf1ca}{ant\+Game}} (struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}} $\ast$p\+Properties)
+\item 
+void \mbox{\hyperlink{_ant_8c_a7892f56d9ab0c36af4e56bd3ffc32d70}{log\+Ant}} (struct \mbox{\hyperlink{struct_ant}{Ant}} ant, unsigned int $\ast$$\ast$board, struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}} $\ast$p\+Properties, int \mbox{\hyperlink{_game_of_life_8h_a73807f240e3277556ecd5d644936e2d6}{cycle}})
+\item 
+void \mbox{\hyperlink{_ant_8c_a335bc7502cde70589c01f54bb2685335}{change\+Field}} (struct \mbox{\hyperlink{struct_ant}{Ant}} ant, unsigned int $\ast$$\ast$board)
+\item 
+void \mbox{\hyperlink{_ant_8c_a9b1a842a9d3afbf90c8b7efb18c52dca}{move}} (struct \mbox{\hyperlink{struct_ant}{Ant}} $\ast$ant, struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}} properties)
+\item 
+void \mbox{\hyperlink{_ant_8c_a7cd56fcb6190782aa69e488baaed5f13}{change\+Direction}} (struct \mbox{\hyperlink{struct_ant}{Ant}} $\ast$ant, unsigned int $\ast$$\ast$board)
+\item 
+void \mbox{\hyperlink{_ant_8c_ae38d529a74c17ee532165cd4623d541a}{put\+Ant}} (struct \mbox{\hyperlink{struct_ant}{Ant}} $\ast$p\+Ant, unsigned int $\ast$$\ast$board, struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}} $\ast$p\+Properties)
+\item 
+unsigned int $\ast$$\ast$ \mbox{\hyperlink{_ant_8c_adb9dd5f535a82701b884475ba92662bf}{make\+Board}} (struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}} $\ast$p\+Properties)
+\item 
+void \mbox{\hyperlink{_ant_8c_a3341912470617059321429f0c09c559f}{save}} (struct \mbox{\hyperlink{struct_ant}{Ant}} ant, unsigned int $\ast$$\ast$board, struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}} $\ast$p\+Properties)
+\item 
+void \mbox{\hyperlink{_ant_8c_a655343e1b956c99342464a8680a99db4}{write\+Ant\+Game\+To\+Stream}} (F\+I\+LE $\ast$file, struct \mbox{\hyperlink{struct_ant}{Ant}} ant, unsigned int $\ast$$\ast$board, struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}} $\ast$p\+Properties)
+\item 
+void \mbox{\hyperlink{_ant_8c_a52a002bb60df0b9a84eddcc9bf171583}{clear\+Board}} (unsigned int $\ast$$\ast$board, struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}} $\ast$p\+Properties)
+\item 
+void \mbox{\hyperlink{_ant_8c_a2035eb66309ff723e91ec6ed74eb4bcb}{print\+Board}} (struct \mbox{\hyperlink{struct_ant}{Ant}} ant, unsigned int $\ast$$\ast$board, struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}} $\ast$p\+Properties, int \mbox{\hyperlink{_game_of_life_8h_a73807f240e3277556ecd5d644936e2d6}{cycle}})
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_ant_8c_a519c00f7d8d01c295ac95792f77cf1ca}\label{_ant_8c_a519c00f7d8d01c295ac95792f77cf1ca}} 
+\index{Ant.\+c@{Ant.\+c}!ant\+Game@{ant\+Game}}
+\index{ant\+Game@{ant\+Game}!Ant.\+c@{Ant.\+c}}
+\subsubsection{\texorpdfstring{ant\+Game()}{antGame()}}
+{\footnotesize\ttfamily void ant\+Game (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}} $\ast$}]{p\+Properties }\end{DoxyParamCaption})}
+
+Main function which manages as ant game 
+\begin{DoxyParams}{Parameters}
+{\em p\+Properties} & -\/ arguments pointer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file Ant.\+c.
+
+\mbox{\Hypertarget{_ant_8c_a7cd56fcb6190782aa69e488baaed5f13}\label{_ant_8c_a7cd56fcb6190782aa69e488baaed5f13}} 
+\index{Ant.\+c@{Ant.\+c}!change\+Direction@{change\+Direction}}
+\index{change\+Direction@{change\+Direction}!Ant.\+c@{Ant.\+c}}
+\subsubsection{\texorpdfstring{change\+Direction()}{changeDirection()}}
+{\footnotesize\ttfamily void change\+Direction (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_ant}{Ant}} $\ast$}]{ant,  }\item[{unsigned int $\ast$$\ast$}]{board }\end{DoxyParamCaption})}
+
+Rotate ant 
+\begin{DoxyParams}{Parameters}
+{\em ant} & -\/ ant instance \\
+\hline
+{\em board} & -\/ board instance \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 75 of file Ant.\+c.
+
+\mbox{\Hypertarget{_ant_8c_a335bc7502cde70589c01f54bb2685335}\label{_ant_8c_a335bc7502cde70589c01f54bb2685335}} 
+\index{Ant.\+c@{Ant.\+c}!change\+Field@{change\+Field}}
+\index{change\+Field@{change\+Field}!Ant.\+c@{Ant.\+c}}
+\subsubsection{\texorpdfstring{change\+Field()}{changeField()}}
+{\footnotesize\ttfamily void change\+Field (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_ant}{Ant}}}]{ant,  }\item[{unsigned int $\ast$$\ast$}]{board }\end{DoxyParamCaption})}
+
+Change value on board under ant 
+\begin{DoxyParams}{Parameters}
+{\em ant} & -\/ ant instance \\
+\hline
+{\em board} & -\/ board \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 37 of file Ant.\+c.
+
+\mbox{\Hypertarget{_ant_8c_a52a002bb60df0b9a84eddcc9bf171583}\label{_ant_8c_a52a002bb60df0b9a84eddcc9bf171583}} 
+\index{Ant.\+c@{Ant.\+c}!clear\+Board@{clear\+Board}}
+\index{clear\+Board@{clear\+Board}!Ant.\+c@{Ant.\+c}}
+\subsubsection{\texorpdfstring{clear\+Board()}{clearBoard()}}
+{\footnotesize\ttfamily void clear\+Board (\begin{DoxyParamCaption}\item[{unsigned int $\ast$$\ast$}]{board,  }\item[{struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}} $\ast$}]{p\+Properties }\end{DoxyParamCaption})}
+
+Frees board memory 
+\begin{DoxyParams}{Parameters}
+{\em board} & -\/ board \\
+\hline
+{\em p\+Properties} & -\/ properties of the game pointer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 152 of file Ant.\+c.
+
+\mbox{\Hypertarget{_ant_8c_a7892f56d9ab0c36af4e56bd3ffc32d70}\label{_ant_8c_a7892f56d9ab0c36af4e56bd3ffc32d70}} 
+\index{Ant.\+c@{Ant.\+c}!log\+Ant@{log\+Ant}}
+\index{log\+Ant@{log\+Ant}!Ant.\+c@{Ant.\+c}}
+\subsubsection{\texorpdfstring{log\+Ant()}{logAnt()}}
+{\footnotesize\ttfamily void log\+Ant (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_ant}{Ant}}}]{ant,  }\item[{unsigned int $\ast$$\ast$}]{board,  }\item[{struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}} $\ast$}]{p\+Properties,  }\item[{int}]{cycle }\end{DoxyParamCaption})}
+
+Logs game state to file 
+\begin{DoxyParams}{Parameters}
+{\em ant} & -\/ ant instance \\
+\hline
+{\em board} & -\/ board \\
+\hline
+{\em p\+Properties} & -\/ properties of the game pointer \\
+\hline
+{\em cycle} & -\/ cycle of game -\/1 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file Ant.\+c.
+
+\mbox{\Hypertarget{_ant_8c_adb9dd5f535a82701b884475ba92662bf}\label{_ant_8c_adb9dd5f535a82701b884475ba92662bf}} 
+\index{Ant.\+c@{Ant.\+c}!make\+Board@{make\+Board}}
+\index{make\+Board@{make\+Board}!Ant.\+c@{Ant.\+c}}
+\subsubsection{\texorpdfstring{make\+Board()}{makeBoard()}}
+{\footnotesize\ttfamily unsigned int$\ast$$\ast$ make\+Board (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}} $\ast$}]{p\+Properties }\end{DoxyParamCaption})}
+
+Allocates memory for game board 
+\begin{DoxyParams}{Parameters}
+{\em p\+Properties} & -\/ properties of the game pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+pointer of the board 
+\end{DoxyReturn}
+
+
+Definition at line 112 of file Ant.\+c.
+
+\mbox{\Hypertarget{_ant_8c_a9b1a842a9d3afbf90c8b7efb18c52dca}\label{_ant_8c_a9b1a842a9d3afbf90c8b7efb18c52dca}} 
+\index{Ant.\+c@{Ant.\+c}!move@{move}}
+\index{move@{move}!Ant.\+c@{Ant.\+c}}
+\subsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void move (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_ant}{Ant}} $\ast$}]{ant,  }\item[{struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}}}]{properties }\end{DoxyParamCaption})}
+
+Move ant forward 
+\begin{DoxyParams}{Parameters}
+{\em ant} & -\/ ant instance \\
+\hline
+{\em properties} & -\/ properties of the game pointer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 44 of file Ant.\+c.
+
+\mbox{\Hypertarget{_ant_8c_a2035eb66309ff723e91ec6ed74eb4bcb}\label{_ant_8c_a2035eb66309ff723e91ec6ed74eb4bcb}} 
+\index{Ant.\+c@{Ant.\+c}!print\+Board@{print\+Board}}
+\index{print\+Board@{print\+Board}!Ant.\+c@{Ant.\+c}}
+\subsubsection{\texorpdfstring{print\+Board()}{printBoard()}}
+{\footnotesize\ttfamily void print\+Board (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_ant}{Ant}}}]{ant,  }\item[{unsigned int $\ast$$\ast$}]{board,  }\item[{struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}} $\ast$}]{p\+Properties,  }\item[{int}]{cycle }\end{DoxyParamCaption})}
+
+Prints board on the console 
+\begin{DoxyParams}{Parameters}
+{\em ant} & -\/ ant instance \\
+\hline
+{\em board} & -\/ board \\
+\hline
+{\em p\+Properties} & -\/ properties of the game pointer \\
+\hline
+{\em cycle} & -\/ cycle of game -\/1 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 158 of file Ant.\+c.
+
+\mbox{\Hypertarget{_ant_8c_ae38d529a74c17ee532165cd4623d541a}\label{_ant_8c_ae38d529a74c17ee532165cd4623d541a}} 
+\index{Ant.\+c@{Ant.\+c}!put\+Ant@{put\+Ant}}
+\index{put\+Ant@{put\+Ant}!Ant.\+c@{Ant.\+c}}
+\subsubsection{\texorpdfstring{put\+Ant()}{putAnt()}}
+{\footnotesize\ttfamily void put\+Ant (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_ant}{Ant}} $\ast$}]{p\+Ant,  }\item[{unsigned int $\ast$$\ast$}]{board,  }\item[{struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}} $\ast$}]{p\+Properties }\end{DoxyParamCaption})}
+
+Puts ant on the board(inits data in ant instance) 
+\begin{DoxyParams}{Parameters}
+{\em p\+Ant} & -\/ ant pointer \\
+\hline
+{\em board} & -\/ board \\
+\hline
+{\em p\+Properties} & -\/ properties of the game pointer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 105 of file Ant.\+c.
+
+\mbox{\Hypertarget{_ant_8c_a3341912470617059321429f0c09c559f}\label{_ant_8c_a3341912470617059321429f0c09c559f}} 
+\index{Ant.\+c@{Ant.\+c}!save@{save}}
+\index{save@{save}!Ant.\+c@{Ant.\+c}}
+\subsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily void save (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_ant}{Ant}}}]{ant,  }\item[{unsigned int $\ast$$\ast$}]{board,  }\item[{struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}} $\ast$}]{p\+Properties }\end{DoxyParamCaption})}
+
+Saves game to the file 
+\begin{DoxyParams}{Parameters}
+{\em ant} & -\/ ant instance \\
+\hline
+{\em board} & -\/ board \\
+\hline
+{\em p\+Properties} & -\/ properties of the game pointer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 123 of file Ant.\+c.
+
+\mbox{\Hypertarget{_ant_8c_a655343e1b956c99342464a8680a99db4}\label{_ant_8c_a655343e1b956c99342464a8680a99db4}} 
+\index{Ant.\+c@{Ant.\+c}!write\+Ant\+Game\+To\+Stream@{write\+Ant\+Game\+To\+Stream}}
+\index{write\+Ant\+Game\+To\+Stream@{write\+Ant\+Game\+To\+Stream}!Ant.\+c@{Ant.\+c}}
+\subsubsection{\texorpdfstring{write\+Ant\+Game\+To\+Stream()}{writeAntGameToStream()}}
+{\footnotesize\ttfamily void write\+Ant\+Game\+To\+Stream (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{file,  }\item[{struct \mbox{\hyperlink{struct_ant}{Ant}}}]{ant,  }\item[{unsigned int $\ast$$\ast$}]{board,  }\item[{struct \mbox{\hyperlink{struct_ant_properties}{Ant\+Properties}} $\ast$}]{p\+Properties }\end{DoxyParamCaption})}
+
+Write game state to file 
+\begin{DoxyParams}{Parameters}
+{\em file} & -\/ file reference \\
+\hline
+{\em ant} & -\/ ant instance \\
+\hline
+{\em board} & -\/ board \\
+\hline
+{\em p\+Properties} & -\/ properties of the game pointer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 130 of file Ant.\+c.
+

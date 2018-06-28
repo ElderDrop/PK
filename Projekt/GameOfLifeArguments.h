@@ -2,12 +2,17 @@
 #define PROJEKT_GAMEOFLIFEARGUMENT_H
 
 #include <stdbool.h>
-
+/** Contains data for game of life game*/
 struct GameOfLifeArguments {
+    /** Input file name */
     char* startBoardFileName;
+    /** Output file name*/
     char* endBoardFileName;
+    /** How many cycle will be processed*/
     unsigned int lastCycle ;
+    /** Width of the board*/
     unsigned int width;
+    /** Height of the board*/
     unsigned int height;
 };
 

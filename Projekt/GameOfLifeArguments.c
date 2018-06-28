@@ -1,3 +1,4 @@
+/** @file  */
 #include "GameOfLifeArguments.h"
 #include <stdlib.h>
 #include <string.h>

@@ -1,3 +1,5 @@
+/** @file  */
+
 #ifndef PROJEKT_ANT_H
 #define PROJEKT_ANT_H
 
@@ -9,10 +11,14 @@
  */
 enum Directions {UP,RIGHT,DOWN,LEFT};
 
+/** Contains Ant position and direction*/
 struct Ant
 {
+    /** Ant direction*/
     enum Directions direction;
+    /** x position*/
     unsigned int x;
+    /** y position*/
     unsigned int y;
 };
 
@@ -57,6 +63,15 @@ void putAnt(struct Ant *pAnt, unsigned int **board, struct AntProperties *pPrope
  * @param board - board
  */
 void changeField(struct Ant ant, unsigned int **board);
+
+/**
+ * Prints board on the console
+ * @param ant           - ant instance
+ * @param board         - board
+ * @param pProperties   - properties of the game pointer
+ * @param cycle         - cycle of game -1
+ */
+void printBoard(struct Ant ant, unsigned int **board, struct AntProperties *pProperties,int cycle);
 
 /**
  * Saves game to the file

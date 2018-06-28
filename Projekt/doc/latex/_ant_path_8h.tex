@@ -1,0 +1,95 @@
+\hypertarget{_ant_path_8h}{}\section{Ant\+Path.\+h File Reference}
+\label{_ant_path_8h}\index{Ant\+Path.\+h@{Ant\+Path.\+h}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_ant_path}{Ant\+Path}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_ant_path_8h_a4619dbcfd19c06c9cd0aa9afcaada145}{add\+Path}} (struct \mbox{\hyperlink{struct_ant_path}{Ant\+Path}} $\ast$$\ast$p\+Head, int x, int y, int \mbox{\hyperlink{_game_of_life_8h_a73807f240e3277556ecd5d644936e2d6}{cycle}})
+\item 
+void \mbox{\hyperlink{_ant_path_8h_a8c929099532e56f92f39db85e30173b1}{init}} (struct \mbox{\hyperlink{struct_ant_path}{Ant\+Path}} $\ast$p\+Element, int x, int y, int \mbox{\hyperlink{_game_of_life_8h_a73807f240e3277556ecd5d644936e2d6}{cycle}})
+\item 
+void \mbox{\hyperlink{_ant_path_8h_a33430467c02838576d56b25a53934edf}{print\+Path}} (struct \mbox{\hyperlink{struct_ant_path}{Ant\+Path}} $\ast$p\+Head)
+\item 
+void \mbox{\hyperlink{_ant_path_8h_a1d1f9003259b49982937ca3dfce82af5}{clear\+Path}} (struct \mbox{\hyperlink{struct_ant_path}{Ant\+Path}} $\ast$p\+Head)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_ant_path_8h_a4619dbcfd19c06c9cd0aa9afcaada145}\label{_ant_path_8h_a4619dbcfd19c06c9cd0aa9afcaada145}} 
+\index{Ant\+Path.\+h@{Ant\+Path.\+h}!add\+Path@{add\+Path}}
+\index{add\+Path@{add\+Path}!Ant\+Path.\+h@{Ant\+Path.\+h}}
+\subsubsection{\texorpdfstring{add\+Path()}{addPath()}}
+{\footnotesize\ttfamily void add\+Path (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_ant_path}{Ant\+Path}} $\ast$$\ast$}]{p\+Head,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{cycle }\end{DoxyParamCaption})}
+
+Add path at the end of list 
+\begin{DoxyParams}{Parameters}
+{\em p\+Head} & -\/ pointer of pointer on first element of list \\
+\hline
+{\em x} & -\/ x var of ant \\
+\hline
+{\em y} & -\/ y var of ant \\
+\hline
+{\em cycle} & -\/ cycle of game -\/1 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 4 of file Ant\+Path.\+c.
+
+\mbox{\Hypertarget{_ant_path_8h_a1d1f9003259b49982937ca3dfce82af5}\label{_ant_path_8h_a1d1f9003259b49982937ca3dfce82af5}} 
+\index{Ant\+Path.\+h@{Ant\+Path.\+h}!clear\+Path@{clear\+Path}}
+\index{clear\+Path@{clear\+Path}!Ant\+Path.\+h@{Ant\+Path.\+h}}
+\subsubsection{\texorpdfstring{clear\+Path()}{clearPath()}}
+{\footnotesize\ttfamily void clear\+Path (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_ant_path}{Ant\+Path}} $\ast$}]{p\+Head }\end{DoxyParamCaption})}
+
+Frees memory of list 
+\begin{DoxyParams}{Parameters}
+{\em p\+Head} & -\/ first element of list pointer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 39 of file Ant\+Path.\+c.
+
+\mbox{\Hypertarget{_ant_path_8h_a8c929099532e56f92f39db85e30173b1}\label{_ant_path_8h_a8c929099532e56f92f39db85e30173b1}} 
+\index{Ant\+Path.\+h@{Ant\+Path.\+h}!init@{init}}
+\index{init@{init}!Ant\+Path.\+h@{Ant\+Path.\+h}}
+\subsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void init (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_ant_path}{Ant\+Path}} $\ast$}]{p\+Element,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{cycle }\end{DoxyParamCaption})}
+
+Inits data in struct 
+\begin{DoxyParams}{Parameters}
+{\em p\+Element} & -\/ element pointer \\
+\hline
+{\em x} & -\/ x var of ant \\
+\hline
+{\em y} & -\/ y var of ant \\
+\hline
+{\em cycle} & -\/ cycle of game -\/1 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 22 of file Ant\+Path.\+c.
+
+\mbox{\Hypertarget{_ant_path_8h_a33430467c02838576d56b25a53934edf}\label{_ant_path_8h_a33430467c02838576d56b25a53934edf}} 
+\index{Ant\+Path.\+h@{Ant\+Path.\+h}!print\+Path@{print\+Path}}
+\index{print\+Path@{print\+Path}!Ant\+Path.\+h@{Ant\+Path.\+h}}
+\subsubsection{\texorpdfstring{print\+Path()}{printPath()}}
+{\footnotesize\ttfamily void print\+Path (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_ant_path}{Ant\+Path}} $\ast$}]{p\+Head }\end{DoxyParamCaption})}
+
+Prints data from the list 
+\begin{DoxyParams}{Parameters}
+{\em p\+Head} & -\/ first element of list pointer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 29 of file Ant\+Path.\+c.
+

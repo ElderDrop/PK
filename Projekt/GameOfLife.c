@@ -1,3 +1,4 @@
+/** @file  */
 #include "GameOfLife.h"
 #include "ThreadArg.h"
 
@@ -7,7 +8,10 @@ void gameOfLife(struct GameOfLifeArguments* pArguments) {
     game.boardState = true;
     // Load board
     if(!loadBoard(&game,pArguments))
+    {
+        printf("Blad przy ladowaniu pliku, sprawdz czy taki plik istnieje oraz czy jego ilosc kolumn i wierszy pokrywa sie z parametrami przekazanymi do programu");
         return;
+    }
     pthread_t pthread;
     struct ThreadArg threadArg;
 
@@ -126,6 +130,11 @@ bool loadBoard(struct GameOfLife *pGame, struct GameOfLifeArguments *pArguments)
             {
                 if (buffer[i] == '1')
                     pGame->board1[k][i] = '1';
+                else if(buffer[i] != '0')
+                {
+                    fclose(file);
+                    return false;
+                }
             }
             k++;
         }
@@ -144,6 +153,11 @@ void saveGameToFile(struct GameOfLife game, struct GameOfLifeArguments *pArgumen
 
 void writeGame(FILE* file,struct GameOfLife game)
 {
+    if(file ==  NULL)
+    {
+        printf("Nie można otworzyć pliku, sprawdź czy masz uprawnia do zapisywania plików lub/i tworzenia plików");
+        return;
+    }
     char ** board = game.board2;
     if(game.boardState == false)
     {

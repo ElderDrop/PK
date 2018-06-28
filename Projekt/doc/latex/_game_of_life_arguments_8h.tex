@@ -1,0 +1,58 @@
+\hypertarget{_game_of_life_arguments_8h}{}\section{Game\+Of\+Life\+Arguments.\+h File Reference}
+\label{_game_of_life_arguments_8h}\index{Game\+Of\+Life\+Arguments.\+h@{Game\+Of\+Life\+Arguments.\+h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_game_of_life_arguments}{Game\+Of\+Life\+Arguments}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_game_of_life_arguments_8h_a2eec11f5b09138c111276f9e176e359c}{get\+Arguments}} (int argc, char $\ast$$\ast$argv, struct \mbox{\hyperlink{struct_game_of_life_arguments}{Game\+Of\+Life\+Arguments}} $\ast$p\+Arguments)
+\item 
+bool \mbox{\hyperlink{_game_of_life_arguments_8h_aa47e1b5f6fbb5ffc09fc318a0a118aed}{is\+Life\+Properties\+Valid}} (struct \mbox{\hyperlink{struct_game_of_life_arguments}{Game\+Of\+Life\+Arguments}} $\ast$p\+Arguments)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_game_of_life_arguments_8h_a2eec11f5b09138c111276f9e176e359c}\label{_game_of_life_arguments_8h_a2eec11f5b09138c111276f9e176e359c}} 
+\index{Game\+Of\+Life\+Arguments.\+h@{Game\+Of\+Life\+Arguments.\+h}!get\+Arguments@{get\+Arguments}}
+\index{get\+Arguments@{get\+Arguments}!Game\+Of\+Life\+Arguments.\+h@{Game\+Of\+Life\+Arguments.\+h}}
+\subsubsection{\texorpdfstring{get\+Arguments()}{getArguments()}}
+{\footnotesize\ttfamily bool get\+Arguments (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv,  }\item[{struct \mbox{\hyperlink{struct_game_of_life_arguments}{Game\+Of\+Life\+Arguments}} $\ast$}]{p\+Arguments }\end{DoxyParamCaption})}
+
+Gets properties from command line 
+\begin{DoxyParams}{Parameters}
+{\em argc} & -\/ quantity of arguments \\
+\hline
+{\em argv} & -\/ arguments list \\
+\hline
+{\em properties-\/} & properties to return \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ if success false -\/ if failed 
+\end{DoxyReturn}
+
+
+Definition at line 20 of file Game\+Of\+Life\+Arguments.\+c.
+
+\mbox{\Hypertarget{_game_of_life_arguments_8h_aa47e1b5f6fbb5ffc09fc318a0a118aed}\label{_game_of_life_arguments_8h_aa47e1b5f6fbb5ffc09fc318a0a118aed}} 
+\index{Game\+Of\+Life\+Arguments.\+h@{Game\+Of\+Life\+Arguments.\+h}!is\+Life\+Properties\+Valid@{is\+Life\+Properties\+Valid}}
+\index{is\+Life\+Properties\+Valid@{is\+Life\+Properties\+Valid}!Game\+Of\+Life\+Arguments.\+h@{Game\+Of\+Life\+Arguments.\+h}}
+\subsubsection{\texorpdfstring{is\+Life\+Properties\+Valid()}{isLifePropertiesValid()}}
+{\footnotesize\ttfamily bool is\+Life\+Properties\+Valid (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_game_of_life_arguments}{Game\+Of\+Life\+Arguments}} $\ast$}]{p\+Arguments }\end{DoxyParamCaption})}
+
+Validate arguments 
+\begin{DoxyParams}{Parameters}
+{\em p\+Arguments} & -\/ properties pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ if arguments are valid false -\/ if arguments are valid 
+\end{DoxyReturn}
+
+
+Definition at line 6 of file Game\+Of\+Life\+Arguments.\+c.
+

@@ -1,13 +1,19 @@
+/** @file  */
 #ifndef PROJEKT_ANTPATH_H
 #define PROJEKT_ANTPATH_H
 
 #include <stdlib.h>
 #include <stdio.h>
 
+/** Contains data how ant changed position*/
 struct AntPath {
+    /** x position*/
     int x;
+    /** y position*/
     int y;
+    /** which cycle*/
     int cycle;
+    /** pointer on next element in list */
     struct AntPath* pNext;
 };
 

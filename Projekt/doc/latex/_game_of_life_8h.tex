@@ -1,0 +1,242 @@
+\hypertarget{_game_of_life_8h}{}\section{Game\+Of\+Life.\+h File Reference}
+\label{_game_of_life_8h}\index{Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}}
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$pthread.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}Game\+Of\+Life\+Arguments.\+h\char`\"{}}\newline
+\subsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_game_of_life}{Game\+Of\+Life}}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_game_of_life_8h_ac45b63ae965e3db815abc0296a894f9f}{game\+Of\+Life}} (struct \mbox{\hyperlink{struct_game_of_life_arguments}{Game\+Of\+Life\+Arguments}} $\ast$p\+Arguments)
+\item 
+bool \mbox{\hyperlink{_game_of_life_8h_a84f871638e75968634de0782627b5eb6}{load\+Board}} (struct \mbox{\hyperlink{struct_game_of_life}{Game\+Of\+Life}} $\ast$p\+Game, struct \mbox{\hyperlink{struct_game_of_life_arguments}{Game\+Of\+Life\+Arguments}} $\ast$p\+Arguments)
+\item 
+void \mbox{\hyperlink{_game_of_life_8h_ade3dac249a5afd9f6bb00f048e36bf8d}{save\+Game\+To\+File}} (struct \mbox{\hyperlink{struct_game_of_life}{Game\+Of\+Life}} game, struct \mbox{\hyperlink{struct_game_of_life_arguments}{Game\+Of\+Life\+Arguments}} $\ast$p\+Arguments)
+\item 
+void \mbox{\hyperlink{_game_of_life_8h_a73807f240e3277556ecd5d644936e2d6}{cycle}} (char $\ast$$\ast$p\+Main, char $\ast$$\ast$p\+To, struct \mbox{\hyperlink{struct_game_of_life_arguments}{Game\+Of\+Life\+Arguments}} $\ast$p\+Arguments)
+\item 
+int \mbox{\hyperlink{_game_of_life_8h_a9b3783f7fbf27c3854fb7cbe57803f7b}{count\+Neighbours}} (char $\ast$$\ast$board, int x, int y, struct \mbox{\hyperlink{struct_game_of_life_arguments}{Game\+Of\+Life\+Arguments}} $\ast$p\+Arguments)
+\item 
+int \mbox{\hyperlink{_game_of_life_8h_a41fedee0d059f9374300565b520f0346}{is\+Alive}} (char i)
+\item 
+int \mbox{\hyperlink{_game_of_life_8h_abd5110b57b7a3252843db04dde9c08db}{valid\+Boundaries}} (int x, int y, struct \mbox{\hyperlink{struct_game_of_life_arguments}{Game\+Of\+Life\+Arguments}} $\ast$p\+Arguments)
+\item 
+void \mbox{\hyperlink{_game_of_life_8h_a6a4c13082ed88c7a85b4e288a367adeb}{zero}} (void $\ast$p\+Args)
+\item 
+void \mbox{\hyperlink{_game_of_life_8h_a01cafbe83671177f9a620b05dbfccd3a}{write\+Game}} (F\+I\+LE $\ast$file, struct \mbox{\hyperlink{struct_game_of_life}{Game\+Of\+Life}} game)
+\item 
+void \mbox{\hyperlink{_game_of_life_8h_a31cff36e0d25324f8b3d05a2ca7e021a}{log\+Life}} (struct \mbox{\hyperlink{struct_game_of_life}{Game\+Of\+Life}} game, int \mbox{\hyperlink{_game_of_life_8h_a73807f240e3277556ecd5d644936e2d6}{cycle}})
+\item 
+void \mbox{\hyperlink{_game_of_life_8h_aa87b51001aedbfbadaa55302843e0638}{clear}} (struct \mbox{\hyperlink{struct_game_of_life}{Game\+Of\+Life}} $\ast$p\+Game)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{_game_of_life_8h_aa87b51001aedbfbadaa55302843e0638}\label{_game_of_life_8h_aa87b51001aedbfbadaa55302843e0638}} 
+\index{Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}!clear@{clear}}
+\index{clear@{clear}!Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void clear (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_game_of_life}{Game\+Of\+Life}} $\ast$}]{p\+Game }\end{DoxyParamCaption})}
+
+Frees memory 
+\begin{DoxyParams}{Parameters}
+{\em p\+Game} & -\/ game state pointer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 179 of file Game\+Of\+Life.\+c.
+
+\mbox{\Hypertarget{_game_of_life_8h_a9b3783f7fbf27c3854fb7cbe57803f7b}\label{_game_of_life_8h_a9b3783f7fbf27c3854fb7cbe57803f7b}} 
+\index{Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}!count\+Neighbours@{count\+Neighbours}}
+\index{count\+Neighbours@{count\+Neighbours}!Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}}
+\subsubsection{\texorpdfstring{count\+Neighbours()}{countNeighbours()}}
+{\footnotesize\ttfamily int count\+Neighbours (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{board,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{struct \mbox{\hyperlink{struct_game_of_life_arguments}{Game\+Of\+Life\+Arguments}} $\ast$}]{p\+Arguments }\end{DoxyParamCaption})}
+
+Count neighbours 
+\begin{DoxyParams}{Parameters}
+{\em board} & -\/ board \\
+\hline
+{\em x} & -\/ coordinates x \\
+\hline
+{\em y} & -\/ coordinates y \\
+\hline
+{\em p\+Arguments-\/} & arguments pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+quantity of neighbours 
+\end{DoxyReturn}
+
+
+Definition at line 81 of file Game\+Of\+Life.\+c.
+
+\mbox{\Hypertarget{_game_of_life_8h_a73807f240e3277556ecd5d644936e2d6}\label{_game_of_life_8h_a73807f240e3277556ecd5d644936e2d6}} 
+\index{Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}!cycle@{cycle}}
+\index{cycle@{cycle}!Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}}
+\subsubsection{\texorpdfstring{cycle()}{cycle()}}
+{\footnotesize\ttfamily void cycle (\begin{DoxyParamCaption}\item[{char $\ast$$\ast$}]{p\+Main,  }\item[{char $\ast$$\ast$}]{p\+To,  }\item[{struct \mbox{\hyperlink{struct_game_of_life_arguments}{Game\+Of\+Life\+Arguments}} $\ast$}]{p\+Arguments }\end{DoxyParamCaption})}
+
+Do one cycle of the game 
+\begin{DoxyParams}{Parameters}
+{\em p\+Main} & -\/ pointer of original board \\
+\hline
+{\em p\+To} & -\/ pointer of changed board \\
+\hline
+{\em p\+Arguments} & -\/ arguments pointer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file Game\+Of\+Life.\+c.
+
+\mbox{\Hypertarget{_game_of_life_8h_ac45b63ae965e3db815abc0296a894f9f}\label{_game_of_life_8h_ac45b63ae965e3db815abc0296a894f9f}} 
+\index{Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}!game\+Of\+Life@{game\+Of\+Life}}
+\index{game\+Of\+Life@{game\+Of\+Life}!Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}}
+\subsubsection{\texorpdfstring{game\+Of\+Life()}{gameOfLife()}}
+{\footnotesize\ttfamily void game\+Of\+Life (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_game_of_life_arguments}{Game\+Of\+Life\+Arguments}} $\ast$}]{p\+Arguments }\end{DoxyParamCaption})}
+
+Main function which maneges as ant game 
+\begin{DoxyParams}{Parameters}
+{\em p\+Properties} & -\/ properties instance \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 5 of file Game\+Of\+Life.\+c.
+
+\mbox{\Hypertarget{_game_of_life_8h_a41fedee0d059f9374300565b520f0346}\label{_game_of_life_8h_a41fedee0d059f9374300565b520f0346}} 
+\index{Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}!is\+Alive@{is\+Alive}}
+\index{is\+Alive@{is\+Alive}!Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}}
+\subsubsection{\texorpdfstring{is\+Alive()}{isAlive()}}
+{\footnotesize\ttfamily int is\+Alive (\begin{DoxyParamCaption}\item[{char}]{i }\end{DoxyParamCaption})}
+
+Check if cell is alive 
+\begin{DoxyParams}{Parameters}
+{\em i} & -\/ value on board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 -\/ if alive 0 -\/ if dead 
+\end{DoxyReturn}
+
+
+Definition at line 95 of file Game\+Of\+Life.\+c.
+
+\mbox{\Hypertarget{_game_of_life_8h_a84f871638e75968634de0782627b5eb6}\label{_game_of_life_8h_a84f871638e75968634de0782627b5eb6}} 
+\index{Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}!load\+Board@{load\+Board}}
+\index{load\+Board@{load\+Board}!Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}}
+\subsubsection{\texorpdfstring{load\+Board()}{loadBoard()}}
+{\footnotesize\ttfamily bool load\+Board (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_game_of_life}{Game\+Of\+Life}} $\ast$}]{p\+Game,  }\item[{struct \mbox{\hyperlink{struct_game_of_life_arguments}{Game\+Of\+Life\+Arguments}} $\ast$}]{p\+Arguments }\end{DoxyParamCaption})}
+
+Creates board from file 
+\begin{DoxyParams}{Parameters}
+{\em p\+Game} & -\/ game instance \\
+\hline
+{\em p\+Arguments} & -\/ arguments pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true -\/ if success false -\/ if failed 
+\end{DoxyReturn}
+
+
+Definition at line 101 of file Game\+Of\+Life.\+c.
+
+\mbox{\Hypertarget{_game_of_life_8h_a31cff36e0d25324f8b3d05a2ca7e021a}\label{_game_of_life_8h_a31cff36e0d25324f8b3d05a2ca7e021a}} 
+\index{Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}!log\+Life@{log\+Life}}
+\index{log\+Life@{log\+Life}!Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}}
+\subsubsection{\texorpdfstring{log\+Life()}{logLife()}}
+{\footnotesize\ttfamily void log\+Life (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_game_of_life}{Game\+Of\+Life}}}]{game,  }\item[{int}]{cycle }\end{DoxyParamCaption})}
+
+Logs game state to file 
+\begin{DoxyParams}{Parameters}
+{\em game} & -\/ game instance \\
+\hline
+{\em cycle} & -\/ cycle of game -\/1 \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 189 of file Game\+Of\+Life.\+c.
+
+\mbox{\Hypertarget{_game_of_life_8h_ade3dac249a5afd9f6bb00f048e36bf8d}\label{_game_of_life_8h_ade3dac249a5afd9f6bb00f048e36bf8d}} 
+\index{Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}!save\+Game\+To\+File@{save\+Game\+To\+File}}
+\index{save\+Game\+To\+File@{save\+Game\+To\+File}!Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}}
+\subsubsection{\texorpdfstring{save\+Game\+To\+File()}{saveGameToFile()}}
+{\footnotesize\ttfamily void save\+Game\+To\+File (\begin{DoxyParamCaption}\item[{struct \mbox{\hyperlink{struct_game_of_life}{Game\+Of\+Life}}}]{game,  }\item[{struct \mbox{\hyperlink{struct_game_of_life_arguments}{Game\+Of\+Life\+Arguments}} $\ast$}]{p\+Arguments }\end{DoxyParamCaption})}
+
+Saves game state to file 
+\begin{DoxyParams}{Parameters}
+{\em p\+Game} & -\/ game instance \\
+\hline
+{\em p\+Arguments} & -\/ arguments pointer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 147 of file Game\+Of\+Life.\+c.
+
+\mbox{\Hypertarget{_game_of_life_8h_abd5110b57b7a3252843db04dde9c08db}\label{_game_of_life_8h_abd5110b57b7a3252843db04dde9c08db}} 
+\index{Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}!valid\+Boundaries@{valid\+Boundaries}}
+\index{valid\+Boundaries@{valid\+Boundaries}!Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}}
+\subsubsection{\texorpdfstring{valid\+Boundaries()}{validBoundaries()}}
+{\footnotesize\ttfamily int valid\+Boundaries (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{struct \mbox{\hyperlink{struct_game_of_life_arguments}{Game\+Of\+Life\+Arguments}} $\ast$}]{p\+Arguments }\end{DoxyParamCaption})}
+
+Check if point is in valid boundaries 
+\begin{DoxyParams}{Parameters}
+{\em board} & -\/ board \\
+\hline
+{\em x} & -\/ coordinates x \\
+\hline
+{\em y} & -\/ coordinates y \\
+\hline
+{\em p\+Arguments-\/} & arguments pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 -\/ if is in boundaries 1 -\/ if is not in boundaries 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file Game\+Of\+Life.\+c.
+
+\mbox{\Hypertarget{_game_of_life_8h_a01cafbe83671177f9a620b05dbfccd3a}\label{_game_of_life_8h_a01cafbe83671177f9a620b05dbfccd3a}} 
+\index{Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}!write\+Game@{write\+Game}}
+\index{write\+Game@{write\+Game}!Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}}
+\subsubsection{\texorpdfstring{write\+Game()}{writeGame()}}
+{\footnotesize\ttfamily void write\+Game (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{file,  }\item[{struct \mbox{\hyperlink{struct_game_of_life}{Game\+Of\+Life}}}]{game }\end{DoxyParamCaption})}
+
+Write game state to file 
+\begin{DoxyParams}{Parameters}
+{\em file} & -\/ file where content will be put \\
+\hline
+{\em game} & -\/ game instance \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 154 of file Game\+Of\+Life.\+c.
+
+\mbox{\Hypertarget{_game_of_life_8h_a6a4c13082ed88c7a85b4e288a367adeb}\label{_game_of_life_8h_a6a4c13082ed88c7a85b4e288a367adeb}} 
+\index{Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}!zero@{zero}}
+\index{zero@{zero}!Game\+Of\+Life.\+h@{Game\+Of\+Life.\+h}}
+\subsubsection{\texorpdfstring{zero()}{zero()}}
+{\footnotesize\ttfamily void zero (\begin{DoxyParamCaption}\item[{void $\ast$}]{p\+Args }\end{DoxyParamCaption})}
+
+Puts zero in every cell in table 
+\begin{DoxyParams}{Parameters}
+{\em p\+Args} & -\/ arguments passed to thread pointer \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 50 of file Game\+Of\+Life.\+c.
+

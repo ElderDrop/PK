@@ -1,3 +1,4 @@
+/** @file  */
 #ifndef PROJEKT_GAMEOFLIFE_H
 #define PROJEKT_GAMEOFLIFE_H
 
@@ -9,12 +10,17 @@
 #include <pthread.h>
 #include "GameOfLifeArguments.h"
 
-
-struct GameOfLife{
+/** Contains all data for the simulation */
+struct GameOfLife {
+    /** Width of the board*/
     unsigned int width;
+    /** Height of the board*/
     unsigned int height;
+    /** First board */
     char** board1;
+    /** Second board */
     char** board2;
+    /** Which of the board is now main */
     bool boardState;
 };
 

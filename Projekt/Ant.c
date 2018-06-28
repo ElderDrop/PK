@@ -1,3 +1,4 @@
+/** @file  */
 #include "Ant.h"
 #include "AntPath.h"
 
@@ -17,6 +18,7 @@ void antGame(struct AntProperties *pProperties) {
         changeField(ant,board);
         logAnt(ant,board,pProperties,i);
         addPath(pHead,ant.x,ant.y,i);
+        printBoard(ant,board,pProperties,i);
     }
     save(ant, board, pProperties);
     printPath(pHead);
@@ -126,6 +128,11 @@ void save(struct Ant ant, unsigned int **board, struct AntProperties *pPropertie
 }
 
 void writeAntGameToStream(FILE *file,struct Ant ant, unsigned int **board, struct AntProperties *pProperties) {
+    if(file ==  NULL)
+    {
+        printf("Nie można otworzyć pliku, sprawdź czy masz uprawnia do zapisywania plików lub/i tworzenia plików");
+        return;
+    }
     for(int i = 0; i < pProperties->height;i++)
     {
         for(int j = 0; j < pProperties->width;j++)
@@ -146,5 +153,22 @@ void clearBoard(unsigned int **board, struct AntProperties *pProperties) {
     for(int i = 0; i < pProperties->height;i++)
         free(board[i]);
     free(board);
+}
+
+void printBoard(struct Ant ant, unsigned int **board, struct AntProperties *pProperties,int cycle) {
+    printf("Mrowka cykl: %d \n",++cycle);
+    for(int i = 0; i < pProperties->height;i++)
+    {
+        for(int j = 0; j < pProperties->width;j++)
+        {
+            if(j == ant.x && i == ant.y)
+                printf("3");
+            else if(board[i][j] == 1)
+                printf("1");
+            else if(board[i][j] == 0)
+                printf("0");
+        }
+        printf("\n");
+    }
 }
 

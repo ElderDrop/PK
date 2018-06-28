@@ -1,3 +1,4 @@
+/** @file  */
 #include "Mode.h"
 
 /**
@@ -14,15 +15,17 @@ void help()
     printf("-c liczba cykli do przetworzenia w grze\n");
     printf("-w szerokosc planszy\n");
     printf("-t wyskosc planszy\n");
+    printf("PRZYKLADOWE UZYCIE:\n");
+    printf("-g -i input -o output -c 100 -w 10 -t 10\n");
     printf("Mrowka Langtona wymaga 6 argumentow plus argument wybory gry na poczatku !!: \n");
     printf("-o plik wyjsciowy\n");
     printf("-c liczba cykli do przetworzenia w grze\n");
     printf("-w szerokosc planszy\n");
     printf("-t wyskosc planszy\n");
-    printf("-x kordynat poczatkowy x\n");
-    printf("-y kordynat poczatkowy y\n");
-
-
+    printf("-x koordynat poczatkowy x\n");
+    printf("-y koordynat poczatkowy y\n");
+    printf("PRZYKLADOWE UZYCIE:\n");
+    printf("-m -o outputAnt -x 3 -y 3 -c 50 -w 6 -t 6\n");
 }
 
 /**
